@@ -1,0 +1,46 @@
+/* When hiding the picture */
+.ng-hide-add {
+    animation: 0.5s lightSpeedOut ease;
+}
+
+/* When showing the picture */
+.ng-hide-remove {
+    animation: 0.5s flipInX ease;
+}
+
+/* ANIMATIONS (FROM ANIMATE.CSS) ====================== */
+/* Flip in */
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transition-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: perspective(400px);
+    }
+}
+
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}

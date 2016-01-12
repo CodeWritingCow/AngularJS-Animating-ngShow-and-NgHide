@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title></title>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+
+    <body class="container" ng-app="animateApp" ng-controller=mainController>
+
+        <header class="text-center">
+            <h1>Animating Angular Apps<small>ngShow and ngHide</small></h1>
+
+            <!-- Use ng-click to toggle true and false -->
+            <a class="btn btn-primary" href="#" ng-click="lions = !lions" ng-class="{ active: lions }">Toggle Lions</a>
+            <a class="btn btn-success" href="#" ng-click="cranes = !cranes" ng-class="{ active: cranes }">Toggle Cranes</a>
+        </header>
+
+        <div class="row">
+            <div class="col-xs-6">
+
+                <div class="jumbotron" ng-show="lions">
+                    <img src="https://cask.scotch.io/2014/07/14514600585_49ba9f860c.jpg" class="img-responsive img-thumbnail">
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+
+                <div class="jumbotron" ng-show="cranes">
+                    <img src="https://cask.scotch.io/2014/07/cranes.jpg" class="img-responsive img-thumbnail">
+                </div>
+
+            </div>
+        </div>
+        
+    </body>
+</html>
